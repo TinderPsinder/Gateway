@@ -20,9 +20,21 @@ eureka:
 zuul:
   ignoredServices: '*'
   routes:
-    microservice1:
-      path: /api/microservice1/**
-      serviceId: microservice1
-    microservice2:
-      path: /api/microservice2/**
-      serviceId: microservice2
+    auth-service:
+      path: /auth-service/**
+      serviceId: auth-service
+    cards-service:
+      path: /cards-service/**
+      serviceId: cards-service
+    chats-service:
+      path: /chats-service/**
+      serviceId: chats-service
+    maps-service:
+      path: /maps-service/**
+      serviceId: maps-service
+    users-service:
+      path: /users-service/**
+      serviceId: users-service
+    payments-service:
+      path: /payments-service/**
+      serviceId: payments-service
