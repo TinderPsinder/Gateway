@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: gateway
+  data:
+    mongodb:
+      database: psinder
+      host: localhost
+      port: 27017
 
 ribbon:
   eureka:
@@ -38,3 +43,8 @@ zuul:
     payments-service:
       path: /payments-service/**
       serviceId: payments-service
+
+pl:
+  psinder:
+    jwtExpirationMs: 86400000
+    jwtSecret: secretKey
